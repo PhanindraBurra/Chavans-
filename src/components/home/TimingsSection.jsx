@@ -74,27 +74,20 @@ export default function TimingsSection({ onOpenAppointment }) {
             </motion.div>
           </div>
 
-          {/* Days open banner & quick phone */}
+          {/* Overall Timing Badge & Quick Phone */}
           <div className="mt-8 pt-6 border-t border-[#DCFCE7] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#0B2414]">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-[#067C24]" />
-              <span className="font-semibold">{timings.days}</span>
+              <span className="font-semibold">{timings.days} • 10:00 AM – 7:00 PM</span>
             </div>
 
             <div className="flex items-center gap-3">
               <a
-                href="tel:+918309657861"
+                href={`tel:${clinicConfig.contacts.phonePrimary}`}
                 className="flex items-center gap-1.5 font-bold text-[#067C24] hover:underline"
               >
                 <Phone className="w-4 h-4 text-[#067C24]" />
-                <span>+91 83096 57861</span>
-              </a>
-              <span className="text-neutral-300">/</span>
-              <a
-                href="tel:+917032299223"
-                className="flex items-center gap-1.5 font-bold text-[#067C24] hover:underline"
-              >
-                <span>+91 70322 99223</span>
+                <span>Call: {clinicConfig.contacts.phonePrimary}</span>
               </a>
             </div>
           </div>

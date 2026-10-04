@@ -59,7 +59,7 @@ export default function Footer({ onOpenAppointment }) {
               </div>
             </div>
             <p className="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
-              India's premier clinic specializing in Biotech FUE Hair Transplantation and German Fellowship-certified Permanent Makeup aesthetics.
+              India's premier clinic specializing in Biotech FUE Hair Transplantation, Advanced Skin Care &amp; Melasma Treatments, and German Fellowship-certified Permanent Makeup aesthetics.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function Footer({ onOpenAppointment }) {
             <span>Our Clinical Locations Across Andhra Pradesh &amp; Telangana</span>
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* 1. RAJAHMUNDRY FLAGSHIP BRANCH (HIGHLIGHTED FIRST) */}
             <div className="rounded-2xl p-5 bg-gradient-to-b from-[#063B14] to-[#03250C] border-2 border-[#067C24] shadow-xl relative overflow-hidden flex flex-col justify-between">
               {/* Highlight ribbon */}
@@ -135,11 +135,11 @@ export default function Footer({ onOpenAppointment }) {
                 <div className="space-y-1 text-xs text-emerald-200 font-medium pt-1">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3 h-3 text-emerald-400" />
-                    <span>9:00 AM – 1:00 PM &amp; 2:00 PM – 8:00 PM</span>
+                    <span>10:00 AM – 7:00 PM (All 7 Days)</span>
                   </div>
                   <div className="flex items-center gap-1.5 text-white/90">
                     <Phone className="w-3 h-3 text-emerald-400" />
-                    <a href="tel:+918309657861" className="hover:underline">+91 83096 57861</a>
+                    <a href={`tel:${clinicConfig.contacts.phonePrimary}`} className="hover:underline">{clinicConfig.contacts.phonePrimary}</a>
                   </div>
                 </div>
               </div>

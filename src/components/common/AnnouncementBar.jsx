@@ -6,8 +6,8 @@ export default function AnnouncementBar() {
   const { announcement } = clinicConfig;
 
   return (
-    <div className="relative z-40 bg-gradient-to-r from-[#032B0E] via-[#065A1C] to-[#032B0E] text-white py-2 px-4 text-xs md:text-sm font-medium border-b border-[#067C24]/40">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+    <div className="relative z-40 bg-gradient-to-r from-[#032B0E] via-[#065A1C] to-[#032B0E] text-white py-2 px-3 sm:px-4 text-xs md:text-sm font-medium border-b border-[#067C24]/40">
+      <div className="max-w-[1440px] mx-auto px-1 sm:px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
         {/* Left: Announcement text with pulse indicator */}
         <div className="flex items-center justify-center gap-2">
           <span className="flex h-2 w-2 relative">
@@ -38,7 +38,7 @@ export default function AnnouncementBar() {
           <span className="hidden md:inline text-white/30">|</span>
 
           <span className="hidden md:inline text-xs text-emerald-100">
-            Rajahmundry Direct: <a href="tel:+918309657861" className="hover:text-white font-semibold underline underline-offset-2">+91 83096 57861</a>
+            Direct Line: <a href={`tel:${clinicConfig.contacts.phonePrimary}`} className="hover:text-white font-semibold underline underline-offset-2">{clinicConfig.contacts.phonePrimary}</a>
           </span>
         </div>
       </div>

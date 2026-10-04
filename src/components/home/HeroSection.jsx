@@ -28,18 +28,18 @@ export default function HeroSection({ onOpenAppointment }) {
 
   const slide = heroSlides[currentSlide];
 
-  // Word-by-word reveal helper
+  // Word-by-word reveal helper with natural text flow and clean word spacing
   const renderAnimatedWords = (text) => {
     const words = text.split(' ');
     return (
-      <span className="inline-block">
+      <span className="inline">
         {words.map((word, i) => (
           <motion.span
             key={i}
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 + i * 0.08, duration: 0.5, ease: 'easeOut' }}
-            className="inline-block mr-2"
+            className="inline-block mr-2 sm:mr-3 last:mr-0"
           >
             {word}
           </motion.span>
@@ -168,9 +168,9 @@ export default function HeroSection({ onOpenAppointment }) {
                   </button>
 
                   <a
-                    href={`https://wa.me/${contacts.whatsappClean}?text=Hello%20Chavanss%20Clinic,%20I%20am%20interested%20in%20${encodeURIComponent(
+                    href={`https://wa.me/${contacts.whatsappClean}?text=Hello%20Chavanss%20Cosmetic%20Clinic,%20I%20am%20interested%20in%20${encodeURIComponent(
                       slide.title
-                    )}%20at%20Rajahmundry.`}
+                    )}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-4 rounded-full text-[#0B2414] font-semibold text-sm md:text-base bg-white hover:bg-[#E8F8EC]/40 border border-[#067C24]/30 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2"

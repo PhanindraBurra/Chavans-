@@ -66,7 +66,7 @@ export default function CTABanner({ onOpenAppointment }) {
               </button>
 
               <a
-                href={`https://wa.me/${contacts.whatsappClean}?text=Hello%20Chavanss%20Clinic,%20I%20would%20like%20to%20claim%20the%20FREE%20Hair%20Analysis%20Test%20and%20book%20my%20appointment%20at%20Rajahmundry.`}
+                href={`https://wa.me/${contacts.whatsappClean}?text=Hello%20Chavanss%20Cosmetic%20Clinic,%20I%20would%20like%20to%20claim%20the%20FREE%20Analysis%20Test%20and%20book%20my%20appointment.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-4 rounded-full text-white font-semibold text-sm md:text-base bg-[#25D366] hover:bg-emerald-400 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
@@ -78,7 +78,7 @@ export default function CTABanner({ onOpenAppointment }) {
 
             {/* Direct Phone Assistance */}
             <div className="pt-2 text-xs sm:text-sm text-white/80">
-              Immediate Phone Assistance: <a href="tel:+918309657861" className="text-white font-bold underline underline-offset-4 hover:text-emerald-300">+91 83096 57861</a>
+              Immediate Phone Assistance: <a href={`tel:${contacts.phonePrimary}`} className="text-white font-bold underline underline-offset-4 hover:text-emerald-300">{contacts.phonePrimary}</a>
             </div>
           </div>
         </div>

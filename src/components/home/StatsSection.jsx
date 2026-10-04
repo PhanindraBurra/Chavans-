@@ -40,38 +40,40 @@ function CounterNumber({ target, suffix = '', duration = 2 }) {
 function ProgressRing({ percentage = 100, label, subtext }) {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
-  const radius = 54;
-  const stroke = 8;
-  const normalizedRadius = radius - stroke * 2;
-  const circumference = normalizedRadius * 2 * Math.PI;
+  const size = 136;
+  const stroke = 7;
+  const center = size / 2;
+  const radius = center - stroke - 4; // ~57px radius
+  const circumference = radius * 2 * Math.PI;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center p-6 rounded-3xl glass-card bg-white/80 shadow-luxury border border-white">
-      <div className="relative w-36 h-36 flex items-center justify-center">
-        <svg height={radius * 2 + 20} width={radius * 2 + 20} className="transform -rotate-90">
+    <div ref={ref} className="flex flex-col items-center text-center p-6 sm:p-7 rounded-3xl glass-card bg-white/85 shadow-luxury border border-white hover:border-[#067C24]/30 hover:shadow-2xl transition-all duration-300">
+      {/* Circle container ensuring 100% text stays strictly INSIDE the ring */}
+      <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
+        <svg height={size} width={size} className="transform -rotate-90">
           {/* Background circle in soft mint */}
           <circle
             stroke="#DCFCE7"
             fill="transparent"
             strokeWidth={stroke}
-            r={normalizedRadius}
-            cx={radius + 10}
-            cy={radius + 10}
+            r={radius}
+            cx={center}
+            cy={center}
           />
           {/* Animated Progress Circle in Logo Green */}
           <motion.circle
             stroke="url(#clinicGreenGradient)"
             fill="transparent"
             strokeWidth={stroke}
-            strokeDasharray={circumference + ' ' + circumference}
+            strokeDasharray={`${circumference} ${circumference}`}
             initial={{ strokeDashoffset: circumference }}
             animate={{ strokeDashoffset: isInView ? strokeDashoffset : circumference }}
             transition={{ duration: 1.8, ease: 'easeOut' }}
             strokeLinecap="round"
-            r={normalizedRadius}
-            cx={radius + 10}
-            cy={radius + 10}
+            r={radius}
+            cx={center}
+            cy={center}
           />
           <defs>
             <linearGradient id="clinicGreenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -82,21 +84,21 @@ function ProgressRing({ percentage = 100, label, subtext }) {
           </defs>
         </svg>
 
-        {/* Center label */}
-        <div className="absolute flex flex-col items-center justify-center">
-          <span className="font-serif text-3xl font-bold text-[#0B2414]">
+        {/* Center label strictly confined inside the circular boundary */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-2">
+          <span className="font-serif text-xl sm:text-2xl font-black text-[#0B2414] tracking-tight leading-none">
             {isInView ? `${percentage}%` : '0%'}
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#067C24]">
-            Success
+          <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#067C24] mt-1">
+            SUCCESS
           </span>
         </div>
       </div>
 
-      <h4 className="mt-4 font-serif text-lg font-bold text-[#0B2414]">
+      <h4 className="mt-5 font-serif text-lg font-bold text-[#0B2414]">
         {label}
       </h4>
-      <p className="text-xs text-[#23422C] mt-1 max-w-[200px]">
+      <p className="text-xs text-[#23422C] mt-1 max-w-[220px] leading-relaxed">
         {subtext}
       </p>
     </div>
@@ -140,8 +142,8 @@ export default function StatsSection() {
           </p>
         </div>
 
-        {/* Circular Progress Rings */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        {/* Circular Progress Rings - 3 Columns for PMU, Hair Transplant & Skin Care */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {stats.progressIndicators.map((ring) => (
             <ProgressRing
               key={ring.id}

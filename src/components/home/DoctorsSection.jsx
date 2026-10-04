@@ -101,7 +101,7 @@ export default function DoctorsSection({ onOpenAppointment, onOpenCertificates }
               {/* Consultation CTA on each card */}
               <div className="p-6 pt-0">
                 <button
-                  onClick={onOpenAppointment}
+                  onClick={() => onOpenAppointment && onOpenAppointment(doc.specialties[0])}
                   className="w-full py-2.5 rounded-full text-xs font-semibold text-[#067C24] bg-[#E8F8EC] hover:bg-[#067C24] hover:text-white transition-colors duration-300 border border-[#067C24]/30 flex items-center justify-center gap-1.5"
                 >
                   <Calendar className="w-3.5 h-3.5" />

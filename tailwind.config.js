@@ -42,6 +42,7 @@ export default {
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+        outfit: ['"Outfit"', 'sans-serif'],
         poppins: ['"Poppins"', 'sans-serif'],
         inter: ['"Inter"', 'sans-serif'],
       },

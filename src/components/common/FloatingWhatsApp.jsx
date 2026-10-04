@@ -6,7 +6,7 @@ import { clinicConfig } from '../../data/clinic';
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(true);
   const { whatsappClean } = clinicConfig.contacts;
-  const whatsappUrl = `https://wa.me/${whatsappClean}?text=Hello%20Chavanss%20Clinic,%20I%20would%20like%20to%20consult%20for%20Hair%20Transplant%20/%20Permanent%20Makeup%20at%20Rajahmundry.`;
+  const whatsappUrl = `https://wa.me/${whatsappClean}?text=Hello%20Chavanss%20Cosmetic%20Clinic,%20I%20would%20like%20to%20consult%20for%20Hair%20Transplant%20/%20Skin%20Care%20/%20Permanent%20Makeup.`;
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-end flex-col gap-2">
@@ -25,7 +25,7 @@ export default function FloatingWhatsApp() {
                 Chat with Dr. Swetha &amp; Team
               </p>
               <p className="text-[11px] text-neutral-600 mt-0.5">
-                Questions about Hair Restoration or Permanent Makeup? We're online!
+                Questions about Hair Restoration, Skin Care, or Permanent Makeup? We're online!
               </p>
             </div>
             <button

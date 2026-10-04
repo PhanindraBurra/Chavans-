@@ -66,7 +66,7 @@ export default function Preloader({ onComplete }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="mt-4 font-serif text-lg md:text-xl font-semibold text-[#0B2414] tracking-wide"
+              className="mt-4 font-outfit text-xl md:text-2xl font-bold text-[#0B2414] tracking-tight"
             >
               Chavanss Cosmetic Clinic
             </motion.h2>

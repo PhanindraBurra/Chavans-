@@ -14,6 +14,7 @@ import TransformationsSection from './components/home/TransformationsSection';
 import DoctorsSection from './components/home/DoctorsSection';
 import StatsSection from './components/home/StatsSection';
 import HairCareGrid from './components/home/HairCareGrid';
+import SkinCareGrid from './components/home/SkinCareGrid';
 import PermanentMakeupGrid from './components/home/PermanentMakeupGrid';
 import TimingsSection from './components/home/TimingsSection';
 import CTABanner from './components/home/CTABanner';
@@ -89,6 +90,12 @@ export default function App() {
 
         {/* 10. Hair Care Services (12 Cards with BEST / NEW badges) */}
         <HairCareGrid
+          onSelectTreatment={handleSelectTreatment}
+          onOpenAppointment={() => handleOpenAppointment()}
+        />
+
+        {/* 10b. Skin Care Services (Includes Melasma Treatment & Clinical Peels) */}
+        <SkinCareGrid
           onSelectTreatment={handleSelectTreatment}
           onOpenAppointment={() => handleOpenAppointment()}
         />

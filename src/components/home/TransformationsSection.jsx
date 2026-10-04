@@ -204,6 +204,85 @@ export default function TransformationsSection({ onOpenAppointment }) {
             </AnimatePresence>
           </div>
         </div>
+
+        {/* Authentic Client Case Studies Grid (Featuring All User-Provided Images) */}
+        <div className="mt-20 pt-14 border-t border-[#DCFCE7]">
+          <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#067C24] bg-[#E8F8EC] px-3.5 py-1 rounded-full border border-[#067C24]/20">
+              REAL CLIENT GALLERY
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B2414]">
+              Authentic Patient Results from Chavanss Cosmetic Clinic
+            </h3>
+            <p className="text-xs sm:text-sm text-[#23422C]">
+              High-density follicular survival, precision hairline design, and life-changing aesthetic confidence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                src: '/images/client-transformation-1.jpg',
+                title: 'Frontal Hairline Reconstruction',
+                badge: 'Biotech FUE',
+                desc: 'Full natural curly density and sculpted hairline alignment.',
+              },
+              {
+                src: '/images/client-transformation-4.jpg',
+                title: 'High-Density Crown & Temples',
+                badge: 'Happy Client',
+                desc: 'Complete coverage with zero white dots and maximum survival.',
+              },
+              {
+                src: '/images/client-transformation-3.jpg',
+                title: 'Micro-Surgical Graft Alignment',
+                badge: '100% Graft Survival',
+                desc: 'Precision donor extraction to lifelong permanent regrowth.',
+              },
+              {
+                src: '/images/client-transformation-2.jpg',
+                title: 'Volumetric Follicular Revival',
+                badge: 'High Density',
+                desc: 'Rejuvenated thick crown coverage and restored confidence.',
+              },
+            ].map((card, cIdx) => (
+              <motion.div
+                key={cIdx}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="group rounded-3xl overflow-hidden glass-card bg-white/90 border border-[#DCFCE7] shadow-luxury hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="relative aspect-square overflow-hidden bg-neutral-900">
+                  <img
+                    src={card.src}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#067C24] text-white text-[10px] font-extrabold uppercase tracking-wider shadow-md">
+                    {card.badge}
+                  </div>
+                </div>
+
+                <div className="p-4 space-y-1.5">
+                  <h4 className="font-serif text-base font-bold text-[#0B2414] group-hover:text-[#067C24] transition-colors">
+                    {card.title}
+                  </h4>
+                  <p className="text-xs text-[#23422C] leading-relaxed">
+                    {card.desc}
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={onOpenAppointment}
+                      className="w-full py-2 px-3 rounded-xl bg-[#E8F8EC] group-hover:bg-[#067C24] text-[#067C24] group-hover:text-white text-xs font-semibold transition-colors flex items-center justify-center gap-1"
+                    >
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>Get Similar Results</span>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
