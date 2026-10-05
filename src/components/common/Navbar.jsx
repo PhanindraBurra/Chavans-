@@ -69,6 +69,7 @@ export default function Navbar({ onOpenAppointment, onOpenCertificates }) {
     },
     { name: 'Branches', href: '#branches' },
     { name: 'Transformations', href: '#transformations' },
+    { name: 'Reviews', href: '#reviews' },
     { name: 'About', href: '#founder' },
   ];
 

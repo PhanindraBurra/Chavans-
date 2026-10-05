@@ -16,6 +16,7 @@ import StatsSection from './components/home/StatsSection';
 import HairCareGrid from './components/home/HairCareGrid';
 import SkinCareGrid from './components/home/SkinCareGrid';
 import PermanentMakeupGrid from './components/home/PermanentMakeupGrid';
+import ReviewsSection from './components/home/ReviewsSection';
 import TimingsSection from './components/home/TimingsSection';
 import CTABanner from './components/home/CTABanner';
 import AppointmentSection from './components/home/AppointmentSection';
@@ -105,6 +106,9 @@ export default function App() {
           onSelectTreatment={handleSelectTreatment}
           onOpenAppointment={() => handleOpenAppointment()}
         />
+
+        {/* 11b. Patient Reviews & Testimonials with Interactive Write a Review Modal */}
+        <ReviewsSection onOpenAppointment={() => handleOpenAppointment()} />
 
         {/* 12. Convenient Hours For Your Care (Rajahmundry Timings) */}
         <TimingsSection onOpenAppointment={() => handleOpenAppointment()} />
