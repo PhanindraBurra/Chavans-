@@ -282,7 +282,7 @@ export const clinicConfig = {
       id: "dr-cvnr-prasad",
       name: "Dr. CVNR Prasad",
       qualification: "M.D (Hom)",
-      role: "Senior Trichology & Wellness Specialist",
+      role: "Wellness Specialist",
       image: "/images/dr-cvnr-prasad.jpg",
       specialties: [
         "Holistic Hair Loss Management",

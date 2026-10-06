@@ -59,7 +59,7 @@ export const doctorsList = [
   {
     id: 'dr-cvnr-prasad',
     name: 'Dr. CVNR Prasad',
-    role: 'Senior Trichology & Scalp Wellness Specialist',
+    role: 'Wellness Specialist',
     qualification: 'M.D (Hom)',
     treatments: [
       'PRP / PRF / GFC / MesoTherapy',
