@@ -21,24 +21,30 @@ export default function AnnouncementBar() {
         </div>
 
         {/* Right: WhatsApp CTA & Rajahmundry Phone */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2.5 sm:gap-4 flex-shrink-0 whitespace-nowrap">
           <a
             href={announcement.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-white hover:text-emerald-200 transition-colors py-0.5 px-2.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20"
+            className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs text-white hover:text-emerald-200 transition-colors py-0.5 px-2.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 whitespace-nowrap flex-shrink-0"
           >
-            <MessageCircle className="w-3.5 h-3.5 text-emerald-300" />
+            <MessageCircle className="w-3.5 h-3.5 text-emerald-300 flex-shrink-0" />
             <span>WhatsApp:</span>
-            <span className="font-semibold tracking-wider text-emerald-200">
+            <span className="font-semibold tracking-wider text-emerald-200 whitespace-nowrap">
               {announcement.phone}
             </span>
           </a>
 
-          <span className="hidden md:inline text-white/30">|</span>
+          <span className="hidden sm:inline text-white/30">|</span>
 
-          <span className="hidden md:inline text-xs text-emerald-100">
-            Direct Line: <a href={`tel:${clinicConfig.contacts.phonePrimary}`} className="hover:text-white font-semibold underline underline-offset-2">{clinicConfig.contacts.phonePrimary}</a>
+          <span className="hidden sm:inline text-[11px] sm:text-xs text-emerald-100 whitespace-nowrap flex-shrink-0">
+            Direct Line:{' '}
+            <a
+              href={`tel:${clinicConfig.contacts.phonePrimary}`}
+              className="hover:text-white font-semibold underline underline-offset-2 whitespace-nowrap"
+            >
+              {clinicConfig.contacts.phonePrimary}
+            </a>
           </span>
         </div>
       </div>

@@ -90,8 +90,8 @@ export default function Navbar({ onOpenAppointment, onOpenCertificates }) {
           : 'bg-[#FAFCFA]/95 backdrop-blur-md py-3 border-b border-[#DCFCE7]'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3 xl:gap-4">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 xl:px-8">
+        <div className="flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
           {/* Logo Brand: Guaranteed prominent, visible size & unified Outfit font */}
           <a
             href="#hero"

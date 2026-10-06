@@ -274,16 +274,7 @@ export default function HeroSection({ onOpenAppointment }) {
                     </div>
                   </motion.div>
                 </AnimatePresence>
-
-                {/* Floating Aesthetic Pill: Flagship Rajahmundry */}
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                  className="absolute -top-3 -right-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg border border-[#DCFCE7] flex items-center gap-1.5 text-xs font-semibold text-[#0B2414]"
-                >
-                  <Award className="w-4 h-4 text-[#067C24]" />
-                  <span>Rajahmundry Center</span>
-                </motion.div>
+                {/* Card Container End */}
               </div>
             </div>
           </div>
