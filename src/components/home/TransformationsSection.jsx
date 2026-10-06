@@ -93,25 +93,25 @@ export default function TransformationsSection({ onOpenAppointment }) {
           <div className="lg:col-span-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* BEFORE Photo Card */}
-              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-white aspect-[4/3] sm:aspect-[4/3.2] bg-neutral-900 group">
+              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-[#DCFCE7] bg-[#021A08] min-h-[300px] sm:min-h-[360px] flex items-center justify-center p-2 group">
                 <img
                   src={activeItem.beforeImage}
                   alt={`${activeItem.title} - Before`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full max-h-[420px] object-contain rounded-2xl"
                 />
-                <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-rose-600/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
+                <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-rose-600/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20 z-10">
                   BEFORE
                 </div>
               </div>
 
               {/* AFTER Photo Card */}
-              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-white aspect-[4/3] sm:aspect-[4/3.2] bg-neutral-900 group">
+              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-[#DCFCE7] bg-[#021A08] min-h-[300px] sm:min-h-[360px] flex items-center justify-center p-2 group">
                 <img
                   src={activeItem.afterImage}
                   alt={`${activeItem.title} - After`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full max-h-[420px] object-contain rounded-2xl"
                 />
-                <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-[#067C24]/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
+                <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-[#067C24]/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20 z-10">
                   AFTER
                 </div>
               </div>
@@ -212,11 +212,11 @@ export default function TransformationsSection({ onOpenAppointment }) {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="group rounded-3xl overflow-hidden glass-card bg-white/90 border border-[#DCFCE7] shadow-luxury hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="relative aspect-square overflow-hidden bg-neutral-900">
+                <div className="relative aspect-square overflow-hidden bg-[#021A08] p-1 flex items-center justify-center">
                   <img
                     src={card.src}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain rounded-2xl"
                   />
                   <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#067C24] text-white text-[10px] font-extrabold uppercase tracking-wider shadow-md">
                     {card.badge}
