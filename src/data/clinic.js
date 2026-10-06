@@ -46,8 +46,7 @@ export const clinicConfig = {
     phones: ["+91 99089 50119"],
     email: "chavanssclinic@gmail.com",
     timings: {
-      morning: "10:00 AM – 2:00 PM",
-      afternoon: "2:00 PM – 7:00 PM",
+      hours: "10:00 AM – 7:00 PM",
       overall: "10:00 AM – 7:00 PM",
       days: "Monday to Sunday (Open 7 Days a Week)",
       note: "Prior appointment recommended for comprehensive consultation & free hair/skin test",
@@ -74,14 +73,14 @@ export const clinicConfig = {
     {
       id: "hyderabad",
       city: "Hyderabad",
-      area: "Banjara Hills",
+      area: "Punjagutta / Srinagar Colony",
       badge: "Popular Center",
       tagline: "Advanced Cosmetic, Laser & Hair Restoration Studio",
-      address: "Srinagar Colony Main Rd, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500033",
+      address: "Punjagutta, Srinagar Colony Main Road, Next to HDFC Bank, Zeenath Residency, 2nd Floor, Chavanss Cosmetic Clinic, Hyderabad, Telangana 500033",
       phone: "+91 99089 50119",
       timing: "10:00 AM – 7:00 PM (Monday – Sunday)",
-      mapEmbedUrl: "https://maps.google.com/maps?q=Srinagar+Colony+Kamalapuri+Colony+Banjara+Hills+Hyderabad+Telangana+500033&t=&z=14&ie=UTF8&iwloc=&output=embed",
-      mapDirectionsUrl: "https://maps.google.com/?q=Srinagar+Colony+Banjara+Hills+Hyderabad",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Srinagar+Colony+HDFC+Bank+Punjagutta+Hyderabad&t=&z=14&ie=UTF8&iwloc=&output=embed",
+      mapDirectionsUrl: "https://maps.google.com/?q=Srinagar+Colony+Main+Road+Hyderabad",
     },
     {
       id: "vijayawada",

@@ -52,7 +52,7 @@ export default function TransformationsSection({ onOpenAppointment }) {
           <div className="h-1 w-20 bg-gradient-to-r from-[#067C24] to-[#10B981] rounded-full mx-auto" />
 
           <p className="text-base sm:text-lg text-[#23422C] max-w-xl mx-auto font-normal">
-            Slide horizontally to explore authentic, clinical results achieved at Chavanss Cosmetic Clinic.
+            Explore authentic, verified clinical results achieved at Chavanss Cosmetic Clinic.
           </p>
         </div>
 
@@ -87,71 +87,32 @@ export default function TransformationsSection({ onOpenAppointment }) {
           ))}
         </div>
 
-        {/* Interactive Comparison Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left: The Draggable Slider Box */}
+        {/* Side-by-Side Before & After Photo Display (No Dragging) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Left: Clear Side-by-Side Full Photos */}
           <div className="lg:col-span-8">
-            <div className="relative mx-auto max-w-2xl">
-              {/* Outer decorative card frame */}
-              <div
-                ref={containerRef}
-                onMouseDown={() => setIsDragging(true)}
-                onMouseUp={() => setIsDragging(false)}
-                onMouseLeave={() => setIsDragging(false)}
-                onMouseMove={handleMouseMove}
-                onTouchMove={handleTouchMove}
-                className="relative aspect-[4/3] sm:aspect-[16/10] w-full rounded-3xl overflow-hidden glass-card shadow-2xl border-2 border-white select-none cursor-ew-resize bg-neutral-900"
-              >
-                {/* AFTER IMAGE (Base image underneath) */}
-                <div className="absolute inset-0 w-full h-full">
-                  <img
-                    src={activeItem.afterImage}
-                    alt={`${activeItem.title} - After`}
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#022109]/80 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
-                    After
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* BEFORE Photo Card */}
+              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-white aspect-[4/3] sm:aspect-[4/3.2] bg-neutral-900 group">
+                <img
+                  src={activeItem.beforeImage}
+                  alt={`${activeItem.title} - Before`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-rose-600/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
+                  BEFORE
                 </div>
+              </div>
 
-                {/* BEFORE IMAGE (Clipped overlay on top) */}
-                <div
-                  className="absolute inset-y-0 left-0 overflow-hidden"
-                  style={{ width: `${sliderPosition}%` }}
-                >
-                  <div className="relative w-full h-full" style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}>
-                    <img
-                      src={activeItem.beforeImage}
-                      alt={`${activeItem.title} - Before`}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      style={{
-                        width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%',
-                        maxWidth: 'none',
-                      }}
-                      draggable={false}
-                    />
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#022109]/80 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
-                      Before
-                    </div>
-                  </div>
-                </div>
-
-                {/* Draggable Divider Line & Handle */}
-                <div
-                  className="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)] pointer-events-none"
-                  style={{ left: `${sliderPosition}%` }}
-                >
-                  {/* Circular Draggable Button with logo green */}
-                  <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white text-[#067C24] shadow-xl flex items-center justify-center border-2 border-[#067C24] pointer-events-auto">
-                    <MoveHorizontal className="w-5 h-5 animate-pulse" />
-                  </div>
-                </div>
-
-                {/* Instruction banner bottom */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-white/90 flex items-center gap-1.5 pointer-events-none">
-                  <MoveHorizontal className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Drag slider left or right to compare</span>
+              {/* AFTER Photo Card */}
+              <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border-2 border-white aspect-[4/3] sm:aspect-[4/3.2] bg-neutral-900 group">
+                <img
+                  src={activeItem.afterImage}
+                  alt={`${activeItem.title} - After`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-[#067C24]/90 text-white text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-md border border-white/20">
+                  AFTER
                 </div>
               </div>
             </div>

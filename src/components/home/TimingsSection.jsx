@@ -29,46 +29,24 @@ export default function TimingsSection({ onOpenAppointment }) {
             </p>
           </div>
 
-          {/* Time Slots Grid */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Morning Slot */}
+          {/* Single Daily Timing Slot */}
+          <div className="mt-8 max-w-xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="p-6 rounded-2xl glass-card bg-gradient-to-br from-emerald-50/70 to-white/95 border border-emerald-200/60 shadow-sm flex items-start gap-4"
+              className="p-6 sm:p-8 rounded-3xl glass-card bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/60 border-2 border-[#067C24]/30 shadow-luxury flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left"
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#E8F8EC] border border-[#A7F3D0] flex items-center justify-center text-[#067C24] flex-shrink-0">
-                <Sun className="w-6 h-6" />
+              <div className="w-16 h-16 rounded-2xl bg-[#067C24] text-white shadow-lg flex items-center justify-center flex-shrink-0">
+                <Clock className="w-8 h-8 text-white" />
               </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#067C24]">
-                  Morning Session
+              <div className="space-y-1.5 flex-1">
+                <span className="inline-block px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#067C24] bg-[#E8F8EC] border border-[#067C24]/20">
+                  Daily Consultation &amp; Surgery Hours
                 </span>
-                <h4 className="font-serif text-2xl font-bold text-[#0B2414]">
-                  {timings.morning}
+                <h4 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B2414]">
+                  Morning 10:00 AM to Evening 7:00 PM
                 </h4>
-                <p className="text-xs text-[#23422C]">
-                  Ideal for detailed trichoscopy analysis and primary cosmetic consultations.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Afternoon / Evening Slot */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="p-6 rounded-2xl glass-card bg-gradient-to-br from-green-50/70 to-white/95 border border-green-200/60 shadow-sm flex items-start gap-4"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-[#E8F8EC] border border-[#A7F3D0] flex items-center justify-center text-[#067C24] flex-shrink-0">
-                <Moon className="w-6 h-6" />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#067C24]">
-                  Afternoon &amp; Evening Session
-                </span>
-                <h4 className="font-serif text-2xl font-bold text-[#0B2414]">
-                  {timings.afternoon}
-                </h4>
-                <p className="text-xs text-[#23422C]">
-                  Convenient post-work slots for procedures, follow-ups, and laser treatments.
+                <p className="text-xs sm:text-sm text-[#23422C] font-medium">
+                  Open 7 Days a Week • Monday to Sunday
                 </p>
               </div>
             </motion.div>

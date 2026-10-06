@@ -6,8 +6,8 @@ export default function AnnouncementBar() {
   const { announcement } = clinicConfig;
 
   return (
-    <div className="relative z-40 bg-gradient-to-r from-[#032B0E] via-[#065A1C] to-[#032B0E] text-white py-2 px-3 sm:px-4 text-xs md:text-sm font-medium border-b border-[#067C24]/40">
-      <div className="max-w-[1440px] mx-auto px-1 sm:px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+    <div className="relative z-40 bg-gradient-to-r from-[#032B0E] via-[#065A1C] to-[#032B0E] text-white py-2 border-b border-[#067C24]/40">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
         {/* Left: Announcement text with pulse indicator */}
         <div className="flex items-center justify-center gap-2">
           <span className="flex h-2 w-2 relative">

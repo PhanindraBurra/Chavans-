@@ -202,6 +202,112 @@ export default function ReviewsSection({ onOpenAppointment }) {
           </div>
         </div>
 
+        {/* Featured Patient Video Reviews Section */}
+        <div className="mt-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#067C24] bg-[#E8F8EC] px-3 py-1 rounded-full border border-[#067C24]/20">
+                VIDEO TESTIMONIALS
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B2414]">
+                Watch Authentic Patient Journeys
+              </h3>
+            </div>
+            <p className="text-xs sm:text-sm text-[#23422C] max-w-md">
+              Real video feedback shared by clients after undergoing hair restoration &amp; skin care procedures.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {[
+              {
+                id: 'vid-1',
+                src: '/videos/review-1.mp4',
+                title: 'Hair Restoration Experience',
+                treatment: 'Biotech FUE Hair Transplant',
+                location: 'Rajahmundry',
+              },
+              {
+                id: 'vid-2',
+                src: '/videos/review-2.mp4',
+                title: 'Authentic Scalp & Hair Result',
+                treatment: 'PRP & Laser Therapy',
+                location: 'Hyderabad',
+              },
+              {
+                id: 'vid-3',
+                src: '/videos/review-3.mp4',
+                title: 'Client Journey & Recovery',
+                treatment: 'Instant FUE Hair Transplant',
+                location: 'Vijayawada',
+              },
+              {
+                id: 'vid-4',
+                src: '/videos/review-4.mp4',
+                title: 'Skin Care & Glow Review',
+                treatment: 'Melasma & Carbon Peel',
+                location: 'Rajahmundry',
+              },
+              {
+                id: 'vid-5',
+                src: '/videos/review-5.mp4',
+                title: 'Hairline Design Patient Review',
+                treatment: 'Designer Hairline FUE',
+                location: 'Hyderabad',
+              },
+              {
+                id: 'vid-6',
+                src: '/videos/review-6.mp4',
+                title: 'Permanent Makeup Review',
+                treatment: 'German Microblading',
+                location: 'Visakhapatnam',
+              },
+              {
+                id: 'vid-7',
+                src: '/videos/review-7.mp4',
+                title: 'Full Follicular Revival Story',
+                treatment: 'GFC & Scalp Rejuvenation',
+                location: 'Rajahmundry',
+              },
+            ].map((video) => (
+              <motion.div
+                key={video.id}
+                whileHover={{ y: -4 }}
+                className="group rounded-3xl overflow-hidden glass-card bg-white/95 border border-[#DCFCE7] shadow-luxury hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="relative aspect-[9/16] bg-black overflow-hidden rounded-t-3xl">
+                  <video
+                    src={video.src}
+                    controls
+                    preload="metadata"
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 border border-white/20 pointer-events-none">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                    <span>Verified Patient Video</span>
+                  </div>
+                </div>
+
+                <div className="p-4 space-y-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E8F8EC] text-[#067C24] border border-[#DCFCE7] truncate">
+                      {video.treatment}
+                    </span>
+                    <span className="text-[10px] text-[#23422C] font-semibold flex items-center gap-0.5 flex-shrink-0">
+                      <MapPin className="w-3 h-3 text-[#067C24]" />
+                      {video.location}
+                    </span>
+                  </div>
+                  <h4 className="font-serif font-bold text-sm text-[#0B2414] line-clamp-1">
+                    {video.title}
+                  </h4>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Category Filter Pills */}
         <div className="mt-8 flex flex-wrap items-center gap-2 sm:gap-3">
           {categories.map((cat) => (
