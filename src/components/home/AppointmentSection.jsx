@@ -377,8 +377,8 @@ export default function AppointmentSection({ initialTreatment = '', isModal = fa
                       <option value="Rajahmundry (Flagship - Danavaipeta)">
                         Rajahmundry (Flagship - Danavaipeta)
                       </option>
-                      <option value="Hyderabad (Banjara Hills)">
-                        Hyderabad (Banjara Hills)
+                      <option value="Hyderabad (Punjagutta / Srinagar Colony)">
+                        Hyderabad (Punjagutta / Srinagar Colony)
                       </option>
                       <option value="Vijayawada (Chavadi Residency)">
                         Vijayawada (Chavadi Residency)

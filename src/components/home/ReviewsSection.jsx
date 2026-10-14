@@ -620,7 +620,7 @@ export default function ReviewsSection({ onOpenAppointment }) {
                         className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#DCFCE7] focus:border-[#067C24] focus:ring-2 focus:ring-[#DCFCE7] text-xs sm:text-sm text-[#0B2414] outline-none"
                       >
                         <option value="Rajahmundry Flagship">Rajahmundry Flagship</option>
-                        <option value="Hyderabad (Banjara Hills)">Hyderabad (Banjara Hills)</option>
+                        <option value="Hyderabad (Punjagutta / Srinagar Colony)">Hyderabad (Punjagutta / Srinagar Colony)</option>
                         <option value="Vijayawada">Vijayawada</option>
                         <option value="Visakhapatnam">Visakhapatnam</option>
                       </select>
