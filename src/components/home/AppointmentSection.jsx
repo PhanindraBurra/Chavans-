@@ -129,7 +129,7 @@ export default function AppointmentSection({ initialTreatment = '', isModal = fa
     phone: '',
     doctorId: initialDocId,
     treatment: initialTreatment || availableTreatments[0],
-    branch: 'Rajahmundry (Flagship - Danavaipeta)',
+    branch: 'Rajahmundry (Flagship - Old Somalamma Punta Road)',
     date: '',
     timeSlot: 'Morning (10 AM - 1 PM)',
     message: '',
@@ -374,8 +374,8 @@ export default function AppointmentSection({ initialTreatment = '', isModal = fa
                       onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
                       className="w-full pl-10 pr-8 py-3 rounded-xl bg-white border border-[#DCFCE7] focus:border-[#067C24] focus:ring-2 focus:ring-[#DCFCE7] text-xs sm:text-sm text-[#0B2414] outline-none appearance-none cursor-pointer font-medium transition-all"
                     >
-                      <option value="Rajahmundry (Flagship - Danavaipeta)">
-                        Rajahmundry (Flagship - Danavaipeta)
+                      <option value="Rajahmundry (Flagship - Old Somalamma Punta Road)">
+                        Rajahmundry (Flagship - Old Somalamma Punta Road)
                       </option>
                       <option value="Hyderabad (Punjagutta / Srinagar Colony)">
                         Hyderabad (Punjagutta / Srinagar Colony)
@@ -383,8 +383,8 @@ export default function AppointmentSection({ initialTreatment = '', isModal = fa
                       <option value="Vijayawada (Chavadi Residency)">
                         Vijayawada (Chavadi Residency)
                       </option>
-                      <option value="Visakhapatnam (MVP Colony)">
-                        Visakhapatnam (MVP Colony)
+                      <option value="Visakhapatnam (Dwarakanagar)">
+                        Visakhapatnam (Dwarakanagar)
                       </option>
                     </select>
                     <ChevronDown className="w-4 h-4 text-neutral-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />

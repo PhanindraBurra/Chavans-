@@ -129,7 +129,7 @@ export default function Footer({ onOpenAppointment }) {
                 </div>
 
                 <p className="text-xs text-emerald-100/90 leading-relaxed">
-                  Flat no. 505, Mounica Plaza, Opp. Madhuram Sweets, Danavaipeta, Rajahmundry, Andhra Pradesh
+                  Flat No. 504, Kelam Classic Apartments, Old Somalamma Punta Road, Rajahmundry, Andhra Pradesh 533103
                 </p>
 
                 <div className="space-y-1 text-xs text-emerald-200 font-medium pt-1">
@@ -146,7 +146,7 @@ export default function Footer({ onOpenAppointment }) {
 
               <div className="pt-4">
                 <a
-                  href="https://maps.google.com/?q=Mounica+Plaza+Danavaipeta+Rajahmundry"
+                  href="https://maps.google.com/?q=Kelam+Classic+Apartments+Old+Somalamma+Punta+Road+Rajahmundry"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-2 px-3 rounded-xl bg-[#067C24]/40 hover:bg-[#067C24] text-white border border-[#067C24]/60 text-xs font-semibold transition-all flex items-center justify-center gap-1"
